@@ -19,6 +19,16 @@ export function ContactSection() {
     message: "",
   })
 
+  // Static form for Netlify detection
+  const staticForm = (
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+  )
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
@@ -67,6 +77,7 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="py-20">
+      {staticForm}
       <div className="container mx-auto px-6">
         <motion.div
           className="mb-12 text-center"
