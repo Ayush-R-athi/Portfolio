@@ -9,6 +9,7 @@ import { ProjectsSection } from "@/components/projects-section"
 import { PublicationsSection } from "@/components/publications-section"
 import { AchievementsSection } from "@/components/achievements-section"
 import { ExperienceSection } from "@/components/experience-section"
+import { CertificationsSection } from "@/components/certifications-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -36,6 +37,7 @@ export default function Home() {
           <PublicationsSection />
           <AchievementsSection />
           <ExperienceSection />
+          <CertificationsSection />
           <ContactSection />
           <Footer />
         </main>

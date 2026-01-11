@@ -13,6 +13,13 @@ const experiences = [
   },
   {
     type: "work",
+    title: "Data Science Intern",
+    organization: "Kailash Healthcare LTD.",
+    period: "May 2025 - July 2025",
+    description: "Developed end-to-end ML pipeline on healthcare data with NLP sentiment analysis, supervised modeling, and explainable AI dashboards using SHAP and Power BI/Tableau",
+  },
+  {
+    type: "work",
     title: "Research Intern",
     organization: "Taylor's University",
     period: "May 2025 - July 2025",
