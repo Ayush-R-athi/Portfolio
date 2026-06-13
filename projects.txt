@@ -1,0 +1,366 @@
+AttendSense
+Project Title:
+ 
+AttendSense
+Link:-
+ 
+attend-sense-landing-
+page.vercel.app
+/
+Category:
+ 
+🟢
+ 
+AI/ML + Full Stack (Hybrid Project)
+Repository Type:
+ End-to-End AI SaaS Application
+Why?
+AI Face Recognition (
+dlib
+ + 
+ResNet
+ + SVM) 
+AI Voice Recognition (
+Resemblyzer
+) 
+Streamlit
+ Frontend 
+Flask Landing Page 
+Supabase
+ Database 
+Authentication & Analytics Dashboard 
+Tech Stack
+Frontend: 
+Streamlit
+, HTML, CSS 
+Backend: Python, Flask 
+Database: 
+Supabase
+ PostgreSQL 
+AI/ML: 
+dlib
+ Face Detection 
+ResNet
+ Face Embeddings 
+SVM Classification 
+Resemblyzer
+ Voice Embeddings 
+librosa
+ Audio Processing 
+Classification Breakdown
+Area
+Type
+Face Recognition
+AI/ML
+Voice Recognition
+AI/ML
+Attendance Analytics
+Data Analytics
+Student/Teacher Portals
+Full Stack
+Database Integration
+Full Stack
+QR 
+Enrollment
+Full Stack
+Final Tag
+🏷️
+ 
+AI/ML + Full Stack + Computer Vision + Voice Biometrics
+Complexity
+🔥
+ Advanced (8.5/10)
+2. Zero-Trust Secure Online Transaction System
+Project Title:
+ Zero-Trust Secure Online Transaction System
+Category:
+ 
+🟠
+ 
+Cybersecurity + Backend Development
+Repository Type:
+ Security Engineering Project
+Why?
+RSA-4096 Cryptography 
+AES-256 Encryption 
+Digital Signatures 
+Anti-Replay Protection 
+FastAPI
+ Backend 
+Redis Security Layer 
+Tech Stack
+Backend: 
+FastAPI
+ 
+Security: 
+PyCryptodome
+ 
+Cache: Redis 
+Frontend: HTML/CSS/JS Dashboard 
+Classification Breakdown
+Area
+Type
+Cryptography
+Cybersecurity
+Zero Trust Architecture
+Cybersecurity
+Replay Attack 
+Defense
+Cybersecurity
+API Development
+Backend
+SOC Dashboard
+Frontend
+Final Tag
+🏷️
+ 
+Cybersecurity + Cryptography + Backend Engineering
+Complexity
+🔥
+ Advanced (8/10)
+Repository
+https://github.com/Ayush-R-athi/Secure-Transaction-System/tree/main
+3. AI Real-time GYM Coach
+Project Title:
+ AI Real-time GYM Coach
+Link:-
+ 
+ai-gym-trainer-landing-
+page.vercel.app
+/
+Category:
+ 
+🟢
+ 
+AI/ML + Computer Vision + Full Stack
+Why?
+MediaPipe
+ Pose Estimation 
+Real-time Exercise Detection 
+Rep Counting Algorithms 
+LLM-based Voice Coaching (
+Groq
+) 
+TTS Feedback 
+Streamlit
+ Application 
+SQLite Persistence 
+Tech Stack
+Frontend: 
+Streamlit
+ 
+Computer Vision: 
+MediaPipe
+, OpenCV 
+AI: 
+Groq
+ LLM 
+TTS: 
+gTTS
+ 
+Database: SQLite 
+Classification Breakdown
+Area
+Type
+Pose Detection
+AI/ML
+Exercise Recognition
+Computer Vision
+Form Scoring
+AI Logic
+Voice Coach
+Generative AI
+Dashboard/UI
+Full Stack
+Final Tag
+🏷️
+ 
+AI/ML + Computer Vision + Generative AI + Full Stack
+ 
+Complexity
+🔥
+ Advanced (8/10)
+4) Link: 
+https://github.com/Ayush-R-athi/Project-Sentinel
+Project Sentinel: DoS Attack & 
+Defense
+ Visualizer
+Project Title:
+ Project Sentinel: DoS Attack & 
+Defense
+ Visualizer
+Category:
+ 
+🟠
+ 
+Cybersecurity + Network Security + Full Stack
+Repository Type:
+ Security Simulation & Visualization Platform
+Why?
+DoS/DDoS Attack Simulation 
+Network Virtualization using Mininet 
+Firewall & Rate-Limiting 
+Defense
+ Mechanisms 
+Real-Time Monitoring Dashboard 
+WebSocket-based Live Updates 
+Tech Stack
+Frontend: React, Vite, Chart.js 
+Backend: Flask, 
+WebSockets
+ 
+Network Simulation: Mininet 
+Security: iptables, Rate Limiting 
+Classification Breakdown
+Area
+Type
+DoS Attack Simulation
+Cybersecurity
+Network Monitoring
+Network Security
+Real-Time Dashboard
+Full Stack
+Defense
+ Mechanisms
+Cybersecurity
+WebSocket Communication
+Backend
+Final Tag
+🏷️
+ 
+Cybersecurity + Network Security + Full Stack
+Complexity
+🔥
+ Advanced (8/10)
+5)Link: 
+https://ai-internship-recommender-gamma.vercel.app/
+AI Internship Recommender
+Project Title:
+ AI Internship Recommender
+Category:
+ 
+🟢
+ 
+AI/ML + Full Stack
+Repository Type:
+ Recommendation System
+Why?
+AI-based Internship Ranking 
+Automated Internship Scraping 
+User Authentication 
+Full-Stack Architecture 
+Tech Stack
+Frontend: React, Vite, Tailwind 
+Backend: 
+FastAPI
+ 
+Database/Auth: 
+Supabase
+ 
+AI/ML: Recommendation Engine 
+Classification Breakdown
+Area
+Type
+Recommendation Engine
+AI/ML
+Internship Ranking
+AI/ML
+Authentication
+Full Stack
+Data Scraping
+Backend
+User Dashboard
+Full Stack
+Final Tag
+🏷️
+ 
+AI/ML + Recommendation System + Full Stack
+Complexity
+🔥
+ Intermediate–Advanced (7.5/10)
+6) Link: 
+pulmoscan.netlify.app
+/
+PulmoScan
+Project Title:
+ 
+PulmoScan
+Category:
+ 
+🟢
+ 
+AI/ML + Healthcare AI
+Repository Type:
+ Medical Image Analysis Platform
+Why?
+Lung X-Ray Analysis 
+Disease Prediction 
+Medical AI Application 
+Streamlit
+ Model Deployment 
+Tech Stack
+Frontend: HTML, CSS, JavaScript 
+Backend: 
+Streamlit
+ 
+AI/ML: Medical Imaging Models 
+Classification Breakdown
+Area
+Type
+X-Ray Analysis
+AI/ML
+Disease Prediction
+AI/ML
+Healthcare Application
+HealthTech
+Web Interface
+Frontend
+Final Tag
+🏷️
+ 
+AI/ML + Healthcare AI + Medical Imaging
+Complexity
+🔥
+ Advanced (8/10)
+7) Link: 
+game-platform-
+ivory.vercel.app
+Game Platform: Tic-Tac-Toe & Connect 4
+Project Title:
+ Game Platform: Tic-Tac-Toe & Connect 4
+Category:
+ 
+🔵
+ 
+Game Development + Algorithms
+Repository Type:
+ AI-Powered Game Platform
+Why?
+Game Development 
+AI Opponent 
+Minimax Algorithm 
+Alpha-Beta Pruning 
+Tech Stack
+Web: HTML, CSS, JavaScript 
+Desktop: Python, 
+Tkinter
+ 
+AI Logic: Minimax + Alpha-Beta Pruning 
+Classification Breakdown
+Area
+Type
+Game Development
+Software Development
+AI Opponent
+Algorithms/AI
+Minimax Search
+DSA/AI
+Desktop Application
+Python GUI
+Final Tag
+🏷️
+ 
+Game Development + Algorithms + AI
+Complexity
+🔥
+ Intermediate (6.5/10)

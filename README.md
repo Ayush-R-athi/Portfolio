@@ -1,4 +1,4 @@
-# Ayush Rathi - Portfolio
+# Ayush Rathi - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js 14, featuring 3D animations, dark/light theme toggle, and interactive components.
 
