@@ -19,8 +19,32 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Ayush Rathi - AI & Full-Stack Developer",
   description:
-    "Portfolio of Ayush Rathi - Computer Science student specializing in AI, Machine Learning, and Full-Stack Development",
-    generator: 'v0.app'
+    "Portfolio of Ayush Rathi — Final-year B.Tech CSE student at VIT Chennai specializing in AI, Machine Learning, and Full-Stack Development.",
+  metadataBase: new URL("https://ayushrathi.netlify.app"),
+  openGraph: {
+    type: "website",
+    url: "https://ayushrathi.netlify.app",
+    title: "Ayush Rathi - AI & Full-Stack Developer",
+    description:
+      "Portfolio of Ayush Rathi — Final-year B.Tech CSE student at VIT Chennai specializing in AI, Machine Learning, and Full-Stack Development.",
+    siteName: "Ayush Rathi Portfolio",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Ayush Rathi - AI & Full-Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ayush Rathi - AI & Full-Stack Developer",
+    description:
+      "Portfolio of Ayush Rathi — Final-year B.Tech CSE student at VIT Chennai specializing in AI, Machine Learning, and Full-Stack Development.",
+    images: ["/opengraph-image"],
+  },
+  generator: "v0.app",
 }
 
 export default function RootLayout({
