@@ -2,33 +2,38 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code2, Brain, Globe, Wrench, Users } from "lucide-react"
+import { Code2, Brain, Globe, Wrench, Users, Shield } from "lucide-react"
 
 const skills = [
   {
     category: "Languages",
     icon: Code2,
-    items: ["Python", "C++", "Java", "SQL"],
+    items: ["Python", "TypeScript", "JavaScript", "C++", "Java", "SQL"],
   },
   {
     category: "AI & Machine Learning",
     icon: Brain,
-    items: ["Deep Learning", "TensorFlow", "Scikit-learn", "Computer Vision", "YOLOv7", "XAI (SHAP, LIME)"],
+    items: ["Deep Learning", "Computer Vision (MediaPipe, OpenCV)", "LLMs (Groq)", "ResNet & SVM", "Voice Biometrics", "TensorFlow", "Scikit-learn"],
   },
   {
-    category: "Web Development",
+    category: "Full Stack & Databases",
     icon: Globe,
-    items: ["HTML", "CSS", "JavaScript", "React", "Next.js", "FastAPI", "Streamlit", "MySQL"],
+    items: ["React & Next.js", "FastAPI & Flask", "Tailwind CSS", "Streamlit", "WebSockets", "Supabase", "PostgreSQL", "SQLite"],
+  },
+  {
+    category: "Cybersecurity & Networks",
+    icon: Shield,
+    items: ["Zero-Trust Architecture", "Cryptography (RSA, AES)", "Network Virtualization (Mininet)", "DoS Simulation", "iptables", "PyCryptodome"],
   },
   {
     category: "Developer Tools",
     icon: Wrench,
-    items: ["Git", "GitHub", "VS Code"],
+    items: ["Git & GitHub", "Vite", "VS Code", "Data Scraping", "Linux"],
   },
   {
     category: "Professional",
     icon: Users,
-    items: ["Leadership", "Teamwork", "Research & Technical Writing", "Public Speaking"],
+    items: ["Technical Writing", "Problem Solving", "Leadership", "Client Advisory", "Public Speaking"],
   },
 ]
 

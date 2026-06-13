@@ -42,9 +42,7 @@ export function HeroSection() {
                 AI Enthusiast & Full-Stack Developer
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Computer Science student at VIT Chennai specializing in Artificial Intelligence and Machine Learning.
-                Passionate about building innovative solutions that leverage cutting-edge AI technologies to solve
-                real-world problems.
+                Final-year B.Tech CSE student at VIT Chennai. I engineer end-to-end, scalable applications—combining robust full-stack development, machine learning & AI, and secure architectures to solve complex real-world challenges.
               </p>
             </motion.div>
 

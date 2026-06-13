@@ -8,7 +8,7 @@ const experiences = [
     type: "work",
     title: "Web Development Strategist",
     organization: "ACM VITC",
-    period: "July 2025 - Present",
+    period: "July 2025 - Dec 2025",
     description: "Part-time role leading web development strategy and building portals for the chapter",
   },
   {

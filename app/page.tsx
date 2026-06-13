@@ -5,6 +5,7 @@ import { LoadingScreen } from "@/components/loading-screen"
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { SkillsSection } from "@/components/skills-section"
+import { CodingProfilesSection } from "@/components/coding-profiles-section"
 import { ProjectsSection } from "@/components/projects-section"
 import { PublicationsSection } from "@/components/publications-section"
 import { AchievementsSection } from "@/components/achievements-section"
@@ -33,6 +34,7 @@ export default function Home() {
           <Navigation />
           <HeroSection />
           <SkillsSection />
+          <CodingProfilesSection />
           <ProjectsSection />
           <PublicationsSection />
           <AchievementsSection />

@@ -18,7 +18,25 @@ const certifications = [
       { icon: Shield, name: "Data Munging", desc: "Cleaned and transformed raw datasets into high-quality engineering inputs" }
     ],
     issuedBy: "Suresh Kumar (Global CTO, Walmart) & Tom Brunskill (CEO, Forage)",
-    color: "from-blue-500 to-blue-700"
+    color: "from-blue-500 to-blue-700",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_uhz9G8nzaZBxmwk4Y_1734970133990_completion_certificate.pdf"
+  },
+  {
+    title: "Data Analytics Job Simulation",
+    issuer: "Deloitte Australia via Forage",
+    date: "Feb 2026",
+    verificationId: "gTa37oYG6xRjLjd2Z",
+    level: "Intermediate",
+    description: "Completed practical task modules in Data Analytics, advising a simulated client and delivering data-driven insights.",
+    skills: [
+      { icon: Database, name: "Data Analysis", desc: "Analyzed complex datasets to derive actionable business insights" },
+      { icon: Layers, name: "Data Visualization", desc: "Created comprehensive dashboards and visual reports" },
+      { icon: Award, name: "Client Advisory", desc: "Delivered strategic data-driven recommendations" },
+      { icon: Shield, name: "Data Quality", desc: "Ensured data integrity and accuracy throughout the analysis process" }
+    ],
+    issuedBy: "Deloitte Australia & Forage",
+    color: "from-blue-500 to-blue-700",
+    link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_uhz9G8nzaZBxmwk4Y_1770140317827_completion_certificate.pdf"
   }
 ]
 
@@ -37,11 +55,11 @@ export function CertificationsSection() {
           <p className="text-lg text-muted-foreground">Industry-recognized credentials in advanced software engineering</p>
         </motion.div>
 
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-2">
           {certifications.map((cert, i) => (
             <motion.div
               key={i}
-              className="relative overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-lg transition-all hover:shadow-xl"
+              className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-lg transition-all hover:shadow-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -51,7 +69,7 @@ export function CertificationsSection() {
               <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-5`} />
               
               {/* Header */}
-              <div className="relative mb-6 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div className="relative mb-6 flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
                 <div className="flex-1">
                   <div className="mb-2 flex items-center gap-3">
                     <Award className="h-6 w-6 text-primary" />
@@ -67,7 +85,7 @@ export function CertificationsSection() {
                 <div className="flex flex-col items-end gap-2">
                   <span className="text-sm font-medium text-muted-foreground">{cert.date}</span>
                   <a 
-                    href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_uhz9G8nzaZBxmwk4Y_1734970133990_completion_certificate.pdf"
+                    href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -84,7 +102,7 @@ export function CertificationsSection() {
               {/* Skills Grid */}
               <div className="mb-6">
                 <h4 className="mb-4 text-lg font-semibold text-foreground">Key Engineering Competencies</h4>
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                   {cert.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skillIndex}
@@ -105,7 +123,7 @@ export function CertificationsSection() {
               </div>
 
               {/* Verification ID */}
-              <div className="flex items-center justify-between rounded-lg bg-muted/50 p-3">
+              <div className="mt-auto flex items-center justify-between rounded-lg bg-muted/50 p-3">
                 <span className="text-sm text-muted-foreground">Verification ID:</span>
                 <code className="rounded bg-background px-2 py-1 text-sm font-mono text-foreground">
                   {cert.verificationId}
