@@ -1,9 +1,35 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, ExternalLink, Shield, Database, Code, Layers } from "lucide-react"
+import { Award, ExternalLink, Shield, Database, Code, Layers, Cloud } from "lucide-react"
+import Image from "next/image"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const certifications = [
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Recent",
+    verificationId: "166994767a15493781e63ecc18595a8b",
+    level: "Foundational",
+    description: "Validated overall understanding of the AWS Cloud platform, covering basic cloud concepts, security, and AWS core services.",
+    skills: [
+      { icon: Cloud, name: "Cloud Concepts", desc: "Understanding of AWS Cloud economics and architecture principles" },
+      { icon: Shield, name: "Security & Compliance", desc: "Knowledge of the AWS shared responsibility model and core security services" },
+      { icon: Database, name: "Cloud Technology", desc: "Understanding of core AWS services (compute, network, databases, storage)" },
+      { icon: Layers, name: "Billing & Pricing", desc: "Knowledge of AWS pricing models, billing practices, and cost management" }
+    ],
+    issuedBy: "AWS",
+    color: "from-yellow-500 to-orange-500",
+    link: "https://aws.amazon.com/verification",
+    logo: "/images/aws-certified-cloud-practitioner.png"
+  },
   {
     title: "Advanced Software Engineering Job Simulation",
     issuer: "Walmart Global Tech",
@@ -55,82 +81,105 @@ export function CertificationsSection() {
           <p className="text-lg text-muted-foreground">Industry-recognized credentials in advanced software engineering</p>
         </motion.div>
 
-        <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-2">
-          {certifications.map((cert, i) => (
-            <motion.div
-              key={i}
-              className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-lg transition-all hover:shadow-xl"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-            >
-              {/* Background gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-5`} />
-              
-              {/* Header */}
-              <div className="relative mb-6 flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
-                <div className="flex-1">
-                  <div className="mb-2 flex items-center gap-3">
-                    <Award className="h-6 w-6 text-primary" />
-                    <span className={`rounded-full bg-gradient-to-r ${cert.color} px-3 py-1 text-xs font-bold text-white`}>
-                      {cert.level}
-                    </span>
-                  </div>
-                  <h3 className="mb-2 text-2xl font-bold text-foreground">{cert.title}</h3>
-                  <p className="mb-1 text-lg font-semibold text-primary">{cert.issuer}</p>
-                  <p className="text-sm text-muted-foreground">{cert.issuedBy}</p>
-                </div>
-                
-                <div className="flex flex-col items-end gap-2">
-                  <span className="text-sm font-medium text-muted-foreground">{cert.date}</span>
-                  <a 
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        <div className="mx-auto max-w-7xl relative px-12 sm:px-16">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4 sm:-ml-8">
+              {certifications.map((cert, i) => (
+                <CarouselItem key={i} className="pl-4 sm:pl-8 lg:basis-1/2">
+                  <motion.div
+                    className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-lg transition-all hover:shadow-xl"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
                   >
-                    <ExternalLink className="h-4 w-4" />
-                    Verify Credential
-                  </a>
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="mb-6 text-muted-foreground">{cert.description}</p>
-
-              {/* Skills Grid */}
-              <div className="mb-6">
-                <h4 className="mb-4 text-lg font-semibold text-foreground">Key Engineering Competencies</h4>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                  {cert.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skillIndex}
-                      className="flex items-start gap-3 rounded-lg border border-border bg-background/50 p-4"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: skillIndex * 0.1 }}
-                    >
-                      <skill.icon className="mt-1 h-5 w-5 text-primary" />
-                      <div>
-                        <h5 className="font-semibold text-foreground">{skill.name}</h5>
-                        <p className="text-sm text-muted-foreground">{skill.desc}</p>
+                    {/* Background gradient */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-5`} />
+                    
+                    {/* Header */}
+                    <div className="relative mb-6 flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+                      <div className="flex-1">
+                        <div className="mb-2 flex items-center gap-3">
+                          {cert.logo ? (
+                            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-md bg-white shadow-sm">
+                              <Image src={cert.logo} alt={cert.title} fill className="object-contain p-1" />
+                            </div>
+                          ) : (
+                            <Award className="h-6 w-6 text-primary" />
+                          )}
+                          <span className={`rounded-full bg-gradient-to-r ${cert.color} px-3 py-1 text-xs font-bold text-white`}>
+                            {cert.level}
+                          </span>
+                        </div>
+                        <h3 className="mb-2 text-2xl font-bold text-foreground">{cert.title}</h3>
+                        <p className="mb-1 text-lg font-semibold text-primary">{cert.issuer}</p>
+                        <p className="text-sm text-muted-foreground">{cert.issuedBy}</p>
                       </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+                      
+                      <div className="flex flex-col items-end gap-2">
+                        <span className="text-sm font-medium text-muted-foreground">{cert.date}</span>
+                        <a 
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          Verify Credential
+                        </a>
+                      </div>
+                    </div>
 
-              {/* Verification ID */}
-              <div className="mt-auto flex items-center justify-between rounded-lg bg-muted/50 p-3">
-                <span className="text-sm text-muted-foreground">Verification ID:</span>
-                <code className="rounded bg-background px-2 py-1 text-sm font-mono text-foreground">
-                  {cert.verificationId}
-                </code>
-              </div>
-            </motion.div>
-          ))}
+                    {/* Description */}
+                    <p className="mb-6 text-muted-foreground">{cert.description}</p>
+
+                    {/* Skills Grid */}
+                    <div className="mb-6">
+                      <h4 className="mb-4 text-lg font-semibold text-foreground">Key Engineering Competencies</h4>
+                      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                        {cert.skills.map((skill, skillIndex) => (
+                          <motion.div
+                            key={skillIndex}
+                            className="flex items-start gap-3 rounded-lg border border-border bg-background/50 p-4"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: skillIndex * 0.1 }}
+                          >
+                            <skill.icon className="mt-1 h-5 w-5 text-primary" />
+                            <div>
+                              <h5 className="font-semibold text-foreground">{skill.name}</h5>
+                              <p className="text-sm text-muted-foreground">{skill.desc}</p>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Verification ID */}
+                    <div className="mt-auto flex items-center justify-between rounded-lg bg-muted/50 p-3">
+                      <span className="text-sm text-muted-foreground">Verification ID:</span>
+                      <code className="rounded bg-background px-2 py-1 text-sm font-mono text-foreground">
+                        {cert.verificationId}
+                      </code>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex -left-12" />
+            <CarouselNext className="hidden sm:flex -right-12" />
+            <div className="mt-8 flex justify-center gap-4 sm:hidden">
+              <CarouselPrevious className="static translate-y-0 transform-none" />
+              <CarouselNext className="static translate-y-0 transform-none" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>

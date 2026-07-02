@@ -40,6 +40,13 @@ const achievements = [
     description: "Ranked 7th out of 400 participating teams",
     color: "text-primary",
   },
+  {
+    icon: Award,
+    place: "Top 75",
+    title: "HackOn With Amazon 6.0",
+    description: "Selected as one of the top 75 coders in Amazon's HackOn 6.0",
+    color: "text-orange-500",
+  },
 ]
 
 export function AchievementsSection() {

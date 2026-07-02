@@ -8,6 +8,26 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
+    title: "NeuraChat",
+    description: "AI Chat Interface & ChatGPT Replica",
+    fullDescription: "A highly responsive, full-stack chatbot application designed to replicate ChatGPT, built using the MERN stack with Groq, OpenAI, and Google GenAI APIs, featuring real-time SSE streaming.",
+    tech: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "Groq API"],
+    liveUrl: "https://neura-chat-six.vercel.app/",
+    repoUrl: "",
+    tags: ["AI/ML", "Full Stack"],
+    gradient: "from-blue-500/20 to-purple-500/20",
+  },
+  {
+    title: "Zerodha Clone",
+    description: "MERN Stack Trading Platform",
+    fullDescription: "A full-stack trading platform clone with a micro-frontend architecture, dynamic cash margin calculations, live portfolio holdings, and real-time stock prices via Yahoo Finance.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "MUI", "Chart.js"],
+    liveUrl: "https://zerodha-clone-mern-phi.vercel.app/",
+    repoUrl: "",
+    tags: ["Full Stack"],
+    gradient: "from-emerald-500/20 to-cyan-500/20",
+  },
+  {
     title: "AttendSense",
     description: "AI-Powered Face & Voice Recognition SaaS",
     fullDescription: "An end-to-end AI SaaS application featuring face recognition (ResNet + SVM), voice biometrics, and a full-stack dashboard for analytics.",
